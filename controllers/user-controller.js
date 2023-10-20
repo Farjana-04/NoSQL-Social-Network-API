@@ -85,36 +85,36 @@ module.exports = {
     }
   },
 
-// //   POST to add new friend to user's friend list
-// // /api/users/:userid/fiends/:friendId
-//    //add a friend
-//    addFriend(req, res) {
-//     User.findOneAndUpdate(
-//       { _id: req.params.userId },
-//       { $addToSet: { friends: req.params.friendId } },
-//       { runValidators: true, new: true }
-//     )
-//       .then((user) =>
-//         !user
-//           ? res.status(404).json({ message: "No User find with this ID!" })
-//           : res.json(user)
-//       )
-//       .catch((err) => res.status(500).json(err));
-//   },
-//   //delete a friend
-//   deleteFriend(req, res) {
-//     User.findOneAndUpdate(
-//       { _id: req.params.userId },
-//       { $pull: { friends: req.params.friendId } },
-//       { new: true }
-//     )
-//       .then(
-//         (user) =>
-//           !user
-//             ? res.status(404).json({ message: "No User find with this ID!" })
-//             : res.json(user)
-//       )
-//       .catch((err) => res.status(500).json(err));
-//   },
+//   POST to add new friend to user's friend list
+// /api/users/:userid/fiends/:friendId
+   //add a friend
+   addFriend(req, res) {
+    User.findOneAndUpdate(
+      { _id: req.params.userId },
+      { $addToSet: { friends: req.params.friendId } },
+      { runValidators: true, new: true }
+    )
+      .then((user) =>
+        !user
+          ? res.status(404).json({ message: "No User find with this ID!" })
+          : res.json(user)
+      )
+      .catch((err) => res.status(500).json(err));
+  },
+  //delete a friend
+  deleteFriend(req, res) {
+    User.findOneAndUpdate(
+      { _id: req.params.userId },
+      { $pull: { friends: req.params.friendId } },
+      { new: true }
+    )
+      .then(
+        (user) =>
+          !user
+            ? res.status(404).json({ message: "No User find with this ID!" })
+            : res.json(user)
+      )
+      .catch((err) => res.status(500).json(err));
+  },
  };
   
