@@ -90,32 +90,32 @@ module.exports = {
             res.status(500).json(err);
         }
     },
-//     //   POST to create reaction
-//     addReaction({ params, body }, res) {
-//         Thought.findOneAndUpdate(
-//             { _id: params.thoughtId },
-//             { $push: { reactions: body } },
-//             { new: true, runValidators: true }
-//         )
-//             .then((dbUserData) => {
-//                 if (!dbUserData) {
-//                     res.status(404).json({ message: "No user found with this id!" });
-//                     return;
-//                 }
-//                 res.json({ message: "reaction created"});
-//             })
-//             .catch((err) => res.json(err));
-//     },
-//     // DELETE to pull and remove reaction by reaction's reactionId
-//     removeReaction({ params }, res) {
-//         Thought.findOneAndUpdate(
-//             { _id: params.thoughtId },
-//             // remove specific reply from replies array
-//             // where replyId matches value of params.replyId passed in from route
-//             { $pull: { reactions: { reactionId: params.reactionId } } },
-//             { new: true }
-//         )
-//             .then((dbUserData) => res.json({ message: "reaction removed"}))
-//             .catch((err) => res.json(err));
-//     },
+    //   POST to create reaction
+    addReaction({ params, body }, res) {
+        Thought.findOneAndUpdate(
+            { _id: params.thoughtId },
+            { $push: { reactions: body } },
+            { new: true, runValidators: true }
+        )
+            .then((dbUserData) => {
+                if (!dbUserData) {
+                    res.status(404).json({ message: "No user found with this id!" });
+                    return;
+                }
+                res.json({ message: "reaction created"});
+            })
+            .catch((err) => res.json(err));
+    },
+    // DELETE to pull and remove reaction by reaction's reactionId
+    removeReaction({ params }, res) {
+        Thought.findOneAndUpdate(
+            { _id: params.thoughtId },
+            // remove specific reply from replies array
+            // where replyId matches value of params.replyId passed in from route
+            { $pull: { reactions: { reactionId: params.reactionId } } },
+            { new: true }
+        )
+            .then((dbUserData) => res.json({ message: "reaction removed"}))
+            .catch((err) => res.json(err));
+    },
   };
