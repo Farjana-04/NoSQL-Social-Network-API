@@ -37,13 +37,13 @@ const userSchema = new Schema(
   }
 );
 
-// // Increases the friend count in User model object when friends are added by a user
-// userSchema.virtual("friendCount").get(function () {
-//   return this.friends.length;
-// });
+// Increases the friend count in User model object when friends are added by a user
+userSchema.virtual("friendCount").get(function () {
+  return this.friends.length;
+});
 
-// // Initialize the User model with userSchema
-// const User = model('user', userSchema);
+// Initialize the User model with userSchema
+const User = model('user', userSchema);
 
 
 module.exports = User;
