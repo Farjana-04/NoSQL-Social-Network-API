@@ -7,7 +7,12 @@ This Challenge is to build an API for a social network web application where use
 We’ll use Express.js for routing, a MongoDB database, and the Mongoose ODM. In addition to using the Express.js and Mongoose packages, 
 we may also optionally use a JavaScript date library of our choice or the native JavaScript Date object to format timestamps.
 
-User Story
+![ph](https://github.com/Farjana-04/MVC-Tech-Blog/assets/92415181/c8ed48f3-bcea-4013-9137-83d96f3787b7)
+![ph1](https://github.com/Farjana-04/MVC-Tech-Blog/assets/92415181/791e3fd3-8192-460b-aa17-a25cf45038ef)
+![ph2](https://github.com/Farjana-04/MVC-Tech-Blog/assets/92415181/f94a9256-4d37-469f-8165-842065b88679)
+
+
+## User Story:
 
 AS A social media startup
 I WANT an API for my social network that uses a NoSQL database
