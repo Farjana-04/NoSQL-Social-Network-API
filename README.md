@@ -46,6 +46,8 @@ Follow the examples on my repo.
 ## Contribute
 No contributes
 
-## Tests
+## Tests:
+Testing is not required.
 
 ## Deployed Application Link:
+https://drive.google.com/file/d/18op-vn3eV0F4iCGod-CzUZGVHJQtUXAA/view
